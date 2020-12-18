@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaAlmonteApp.UserDetailPage">
+
+    <StackLayout BackgroundColor="White">
+        <Label Text="Usuario"
+               VerticalOptions="Start" 
+               HorizontalOptions="CenterAndExpand"
+               FontSize="30"
+               TextColor="#2196F3" 
+               FontFamily="Neusa Next Std" 
+               FontAttributes="Bold"/>
+        <StackLayout Margin="20">
+            <Entry
+                x:Name="emailEntry"
+                Margin="0,20,0,0"
+                Placeholder="Email"
+                PlaceholderColor="#2196F3"
+                TextColor="#2196F3"
+                FontSize="16" 
+                FontFamily="Segoe UI"/>
+            <Entry
+                x:Name="statusEntry"
+                Placeholder="Status"
+                PlaceholderColor="#2196F3"
+                TextColor="#2196F3"
+                FontSize="16" 
+                FontFamily="Segoe UI"/>
+            <Button
+                x:Name="updateButton"
+                Text="Update"
+                Clicked="updateButton_Clicked"
+                CornerRadius="20" 
+                BackgroundColor="White"
+                BorderColor="#2196F3"
+                BorderWidth="1"
+                HeightRequest="40" 
+                Margin="0,30,0,0"
+                VerticalOptions="End"
+                FontSize="15"
+                TextColor="#2196F3" 
+                FontFamily="Neusa Next Std" 
+                FontAttributes="Bold"/>
+            <Button
+                x:Name="deleteButton"
+                Text="Delete"
+                Clicked="deleteButton_Clicked"
+                CornerRadius="20" 
+                BackgroundColor="#2196F3"
+                HeightRequest="40" 
+                VerticalOptions="End"
+                FontSize="15"
+                TextColor="White" 
+                FontFamily="Neusa Next Std" 
+                FontAttributes="Bold"/>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

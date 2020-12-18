@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaAlmonteApp.Views.SearchPage">
+
+    <StackLayout Orientation="Vertical">
+        <StackLayout.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="Android" Value="20,20,20,60"/>
+                <On Platform="ios" Value="20,40,20,60"/>
+            </OnPlatform>
+        </StackLayout.Padding>
+        <Frame Padding="20,5" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <SearchBar x:Name="ProductSearchBar"
+                           SearchButtonPressed="ProductSearch_SearchButtonPressed"
+                           TextChanged="ProductSearchBar_TextChanged"
+                           HorizontalOptions="StartAndExpand"
+                           BackgroundColor="White"
+                           Placeholder="Buscar..."
+                           FontSize="15"
+                />
+            </Grid>
+        </Frame>
+        
+        <ListView x:Name="ProductListView" ItemSelected="ProductListView_ItemSelected">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell Height="1000">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0" />
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image HorizontalOptions="Start" HeightRequest="40" WidthRequest="40" Margin="0,2,0,2"  Grid.Column="1" Source="{Binding Image}"/>
+                            <Label 
+                                Grid.Column="2" 
+                                Text="{Binding Descripcion}"  
+                                TextColor="#2196F3"
+                                Margin="10,0,10,0"
+                                FontSize="16" 
+                                VerticalTextAlignment="center"
+                                HorizontalTextAlignment="Start" 
+                                FontFamily="Segoe UI"/>
+                            <Label 
+                                Grid.Column="3" 
+                                Text="{Binding Precio, StringFormat='${0}'}"
+                                HorizontalTextAlignment="Start" 
+                                VerticalTextAlignment="center"
+                                Margin="40,0,10,0"
+                                TextColor="Red"
+                                FontSize="18" 
+                                FontFamily="Segoe UI"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+
+
+
+
+
+
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

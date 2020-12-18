@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaAlmonteApp.CategoriaPage">
+
+    <AbsoluteLayout>
+    <ListView x:Name="categoryListView"
+              ItemSelected="categoryListView_ItemSelected" Margin="15,0,15,0" BackgroundColor="White">
+        <ListView.ItemTemplate >
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0" />
+                        </Grid.ColumnDefinitions>
+                        <Label 
+                            Grid.Column="1" 
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"
+                            Text="{Binding Descripcion}"  
+                            TextColor="#2196F3"
+                            FontSize="20" 
+                            FontFamily="Segoe UI"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <ImageButton 
+            x:Name="AddButton"
+            Source="icons8_add_50px.png" 
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutFlags="PositionProportional"  
+            AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+            Clicked="AddButton_Clicked" />
+    </AbsoluteLayout>
+
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaAlmonteApp.Views.CartPage">
+    <StackLayout>
+        <ListView x:Name="ProductListView" VerticalOptions="Fill" HasUnevenRows="True" ItemsSource="{Binding Carrito}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HeightRequest="120" BackgroundColor="Green" HorizontalOptions="StartAndExpand">
+                            <Grid x:Name="calPad01">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Grid.Row="1" Source="{Binding Image}"/>
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                        Grid.Column="1"
+                                        Text="{Binding Descripcion}"
+                                        TextColor="White"
+                                        HorizontalOptions="CenterAndExpand"/>
+                                    <Image Grid.Column="2" HorizontalOptions="Start" Source="icons8_add_50px.png"/>
+                                    <Label Grid.Column="2" HorizontalOptions="CenterAndExpand" x:Name="CantidadLabel"></Label>
+                                    <Image Grid.Column="2" HorizontalOptions="End" Source="icons8_add_50px.png"/>
+
+                                </Grid>
+                                
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

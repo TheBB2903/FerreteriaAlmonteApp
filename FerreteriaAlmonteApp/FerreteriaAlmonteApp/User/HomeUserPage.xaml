@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FerreteriaAlmonteApp.Views"
+             x:Class="FerreteriaAlmonteApp.HomeUserPage"
+            NavigationPage.HasBackButton="False">
+  <!--Pages can be added as references or inline-->
+    <local:ShopPage IconImageSource="icons8_home_50px.png"/>
+    <local:SearchPage IconImageSource="icons8_search_50px.png"/>
+    <local:CartPage IconImageSource="icons8_shopping_cart_50px.png"/>
+    <local:MorePage IconImageSource="icons8_menu_50px.png"/>
+</TabbedPage>

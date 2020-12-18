@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaAlmonteApp.ProductPage">
+
+    <AbsoluteLayout>
+
+        <ListView x:Name="productListView"
+              ItemSelected="productListView_ItemSelected" Margin="15,5,15,0" BackgroundColor="White">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell Height="1000">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0" />
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image HorizontalOptions="Start" HeightRequest="40" WidthRequest="40" Margin="0,2,0,2"  Grid.Column="1" Source="{Binding Image}"/>
+                            <Label 
+                                Grid.Column="2" 
+                                Text="{Binding Descripcion}"  
+                                TextColor="#2196F3"
+                                Margin="10,0,10,0"
+                                FontSize="16" 
+                                VerticalTextAlignment="center"
+                                HorizontalTextAlignment="Start" 
+                                FontFamily="Segoe UI"/>
+                            <Label 
+                                Grid.Column="3" 
+                                Text="{Binding Precio, StringFormat='${0}'}"
+                                HorizontalTextAlignment="Start" 
+                                VerticalTextAlignment="center"
+                                Margin="40,0,10,0"
+                                TextColor="Red"
+                                FontSize="18" 
+                                FontFamily="Segoe UI"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ImageButton 
+            x:Name="AddButton"
+            Source="icons8_add_50px.png" 
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutFlags="PositionProportional"  
+            AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+            Clicked="AddButton_Clicked" />
+    </AbsoluteLayout>
+
+</ContentPage>

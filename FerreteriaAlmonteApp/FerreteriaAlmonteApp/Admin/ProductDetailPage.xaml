@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaAlmonteApp.ProductDetailPage">
+
+
+    <StackLayout BackgroundColor="White">
+        <Label Text="Producto"
+               VerticalOptions="Start" 
+               HorizontalOptions="CenterAndExpand"
+               FontSize="30"
+               TextColor="#2196F3" 
+               FontFamily="Neusa Next Std" 
+               FontAttributes="Bold"/>
+        <Image x:Name="selectedImage"
+               HeightRequest="250"
+               WidthRequest="250"/>
+        <StackLayout Margin="20">
+            <Entry
+                x:Name="descripcionEntry"
+                Placeholder="Descripcion"
+                TextColor="#2196F3"
+                FontSize="16" 
+                FontFamily="Segoe UI"/>
+            <Entry
+                x:Name="excistenciaEntry"
+                Placeholder="Excistencia"
+                TextColor="#2196F3"
+                FontSize="16" 
+                FontFamily="Segoe UI"/>
+            <Entry
+                x:Name="precioEntry"
+                Placeholder="Precio"
+                TextColor="#2196F3"
+                FontSize="16" 
+                FontFamily="Segoe UI"/>
+            <Entry
+                x:Name="categoriaEntry"
+                Placeholder="Categoria"
+                TextColor="#2196F3"
+                FontSize="16" 
+                FontFamily="Segoe UI"/>
+            <Button
+                x:Name="updateButton"
+                Text="Update"
+                Clicked="updateButton_Clicked"
+                CornerRadius="20" 
+                BackgroundColor="White"
+                BorderColor="#2196F3"
+                BorderWidth="1"
+                HeightRequest="40" 
+                VerticalOptions="Center"
+                FontSize="15"
+                TextColor="#2196F3" 
+                FontFamily="Neusa Next Std" 
+                FontAttributes="Bold"/>
+            <Button
+                x:Name="deleteButton"
+                Text="Delete"
+                Clicked="deleteButton_Clicked"
+                CornerRadius="20" 
+                BackgroundColor="#2196F3"
+                HeightRequest="40" 
+                VerticalOptions="End"
+                FontSize="15"
+                TextColor="White" 
+                FontFamily="Neusa Next Std" 
+                FontAttributes="Bold"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

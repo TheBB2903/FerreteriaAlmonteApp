@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaAlmonteApp.MainPage">
+    
+    <Grid BackgroundColor="#ffff">
+        <BoxView Opacity="0.3" BackgroundColor="#fff"/>
+        <Path Fill="#2196F3" VerticalOptions="Start" Stroke="#2196F3" Aspect="Fill" Data="m193.53255,143.72842l301,0l0,153.76077c-141.82816,-56.43585 -136.50443,66.01643 -301,25.29836l0,-179.05913z"/>
+        <Frame HasShadow="True" CornerRadius="30" Margin="20,0,20,0" Padding="0" HeightRequest="500" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300" BorderColor="#1A0089F7">
+            <Grid RowSpacing="20" Margin="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Path Grid.Row="1" 
+                      Fill="#2196F3" 
+                      HorizontalOptions="Center" 
+                      Stroke="#2196F3" 
+                      Data="M35,.563a35,35,0,1,0,35,35A34.994,34.994,0,0,0,35,.563Zm0,13.548A12.419,12.419,0,1,1,22.581,26.53,12.42,12.42,0,0,1,35,14.111Zm0,48.548a27.044,27.044,0,0,1-20.675-9.625,15.735,15.735,0,0,1,13.9-8.44,3.453,3.453,0,0,1,1,.155A18.686,18.686,0,0,0,35,45.724a18.615,18.615,0,0,0,5.772-.974,3.453,3.453,0,0,1,1-.155,15.735,15.735,0,0,1,13.9,8.44A27.044,27.044,0,0,1,35,62.659Z"/>
+                <Entry Grid.Row="2" 
+                       x:Name="emailEntry"
+                       Placeholder="Email address" 
+                       TextColor="#2196F3"
+                       FontSize="16" 
+                       FontFamily="Segoe UI"/>
+                <Entry Grid.Row="3" 
+                       x:Name="passwordEntry"
+                       Placeholder="Password" 
+                       IsPassword="True"
+                       FontSize="16" 
+                       FontFamily="Segoe UI"/>
+                <ImageButton Grid.Row="3"
+                    x:Name="imagenPassword"
+                    Source="icons8_eye_24px.png"
+                    BackgroundColor="White"
+                    HorizontalOptions="End"
+                    HeightRequest="30"
+                    Clicked="imagenPassword_Clicked"/>
+                <Button Grid.Row="4" 
+                        x:Name="LoginButton"
+                        Clicked="LoginButton_Clicked"
+                        CornerRadius="20" 
+                        BackgroundColor="#2196F3"
+                        HeightRequest="50" 
+                        VerticalOptions="Center"
+                        Text="Login"
+                        FontSize="20"
+                        TextColor="White" 
+                        FontFamily="Neusa Next Std" 
+                        FontAttributes="Bold"/>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Line Grid.Column="1" X1="100" Stroke="#2196F3" StrokeThickness="2"/>
+                    <Label Grid.Column="2" Text="       OR
+                           Sing-In With" FontFamily="SegoeUI" FontSize="14"/>
+                    <Line Grid.Column="3" X1="100" Stroke="#2196F3" StrokeThickness="2"/>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton
+                        Grid.Column="1"
+                        x:Name="facebookButton"
+                        Clicked="facebookButton_Clicked"
+                        BackgroundColor="#ffffff"
+                        Source="facebook.png"
+                        />
+                    <ImageButton
+                        Grid.Column="2"
+                        x:Name="googleButton"
+                        Clicked="facebookButton_Clicked"
+                        BackgroundColor="#ffffff"
+                        Source="google.png"
+                        />
+                </Grid>
+                
+                <Button
+                    x:Name="btnRegistrar"
+                    Text="Don't have an Account?"
+                    TextColor="#2196F3"
+                    HorizontalOptions="Center"
+                    FontSize="12"
+                    BackgroundColor="White"
+                    BorderWidth="0"
+                    BorderColor="White"
+                    Grid.Row="7"
+                    Margin="0,0,0,5"
+                    Clicked="btnRegistrar_Clicked">
+                    
+                </Button>
+
+                <ActivityIndicator 
+                    x:Name="indicador" 
+                    Grid.Row="3"
+                    IsRunning="{Binding isBusy}" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    Color="#2196F3"/>
+
+            </Grid>
+        </Frame>
+        
+    </Grid>
+
+</ContentPage>

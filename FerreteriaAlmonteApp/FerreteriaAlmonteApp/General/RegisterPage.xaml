@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaAlmonteApp.RegisterPage">
+
+    <Grid BackgroundColor="#ffff">
+        <BoxView Opacity="0.3" BackgroundColor="#fff"/>
+        <Path Fill="#2196F3" VerticalOptions="Start" Stroke="#2196F3" Aspect="Fill" Data="m193.53255,143.72842l301,0l0,153.76077c-141.82816,-56.43585 -136.50443,66.01643 -301,25.29836l0,-179.05913z"/>
+        <Frame HasShadow="True" CornerRadius="30" Margin="20,0,20,0" Padding="0" HeightRequest="500" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="300" BorderColor="#1A0089F7">
+            <Grid RowSpacing="20" Margin="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+
+                <Path Grid.Row="1" 
+                      Fill="#2196F3" 
+                      HorizontalOptions="Center" 
+                      Stroke="#2196F3" 
+                      Data="M35,.563a35,35,0,1,0,35,35A34.994,34.994,0,0,0,35,.563Zm0,13.548A12.419,12.419,0,1,1,22.581,26.53,12.42,12.42,0,0,1,35,14.111Zm0,48.548a27.044,27.044,0,0,1-20.675-9.625,15.735,15.735,0,0,1,13.9-8.44,3.453,3.453,0,0,1,1,.155A18.686,18.686,0,0,0,35,45.724a18.615,18.615,0,0,0,5.772-.974,3.453,3.453,0,0,1,1-.155,15.735,15.735,0,0,1,13.9,8.44A27.044,27.044,0,0,1,35,62.659Z"/>
+                <Entry Grid.Row="2" 
+                       x:Name="emailEntry"
+                       Placeholder="Email address" 
+                       TextColor="#2196F3"
+                       FontSize="16" 
+                       FontFamily="Segoe UI"/>
+                <Entry Grid.Row="3" 
+                       x:Name="passwordEntry"
+                       Placeholder="Password" 
+                       IsPassword="True"
+                       FontSize="16" 
+                       FontFamily="Segoe UI"/>
+                <Entry Grid.Row="4" 
+                       x:Name="confirmPasswordEntry"
+                       Placeholder="Confirm Password" 
+                       IsPassword="True"
+                       FontSize="16" 
+                       FontFamily="Segoe UI"/>
+                <Button Grid.Row="5"
+                        Clicked="RegisterButton_Clicked"
+                        x:Name="RegisterButton"
+                        CornerRadius="20" 
+                        BackgroundColor="#2196F3"
+                        HeightRequest="50" 
+                        VerticalOptions="Center"
+                        Text="Registrar"
+                        FontSize="20"
+                        TextColor="White" 
+                        FontFamily="Neusa Next Std" 
+                        FontAttributes="Bold"/>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Line Grid.Column="1" X1="100" Stroke="#2196F3" StrokeThickness="2"/>
+                    <Label Grid.Column="2" Text="       OR
+                           Sing-In With" FontFamily="SegoeUI" FontSize="14"/>
+                    <Line Grid.Column="3" X1="100" Stroke="#2196F3" StrokeThickness="2"/>
+                </Grid>
+                <Grid Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Path Grid.Column="1" Fill="#2196F3" HorizontalOptions="Start" Stroke="#2196F3" Data="M50.563,25.715A25,25,0,1,0,21.656,50.563V32.985H15.305V25.715h6.351V20.173c0-6.3,3.73-9.785,9.443-9.785a38.249,38.249,0,0,1,5.6.491v6.187H33.542c-3.1,0-4.074,1.939-4.074,3.928v4.721H36.4l-1.109,7.271H29.469V50.563A25.115,25.115,0,0,0,50.563,25.715Z"/>
+                    <Path Grid.Column="2" Fill="#2196F3" HorizontalOptions="Start" Stroke="#2196F3" Data="M50,26.147c0,14.264-9.928,24.415-24.59,24.415A25.177,25.177,0,0,1,0,25.563a25.177,25.177,0,0,1,25.41-25A24.655,24.655,0,0,1,42.449,7.1l-6.916,6.542C26.486,5.058,9.662,11.51,9.662,25.563A15.785,15.785,0,0,0,25.41,41.349c10.061,0,13.832-7.1,14.426-10.776H25.41v-8.6H49.6A21.574,21.574,0,0,1,50,26.147Z"/>
+                </Grid>
+
+            </Grid>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>
